@@ -34,3 +34,4 @@
       apt:
         name: mariadb-server
         state: present
+ 
