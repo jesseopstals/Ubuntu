@@ -1,0 +1,16 @@
+---
+- name: playbook
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: Copy index.php to Apache server
+      copy:
+        src: index.php
+        dest: /var/www/html/
+        mode: 0644
+
+    - name: Copy testpagina.php to Apache server
+      copy:
+        src: testpagina.php
+        dest: /var/www/html/
+        mode: 0644
